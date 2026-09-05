@@ -1,133 +1,28 @@
 {
-  "version": 4,
+  "version": 5,
+  "skill_version": "3.2.0",
+  "evaluation_status": "inputs_only_not_model_tested",
   "should_trigger": [
-    {
-      "prompt": "使用 $mingbian 帮我把这份方案从大方向到执行细节真正想清楚，一次问我一个问题。",
-      "branch": "sequential-mingbian",
-      "must_read": [
-        "references/interview-protocol.md"
-      ],
-      "expected_behavior": [
-        "先读完材料并自行查实事实",
-        "先辨本与辨路，再下沉到关键辨法与辨成",
-        "默认每轮一辨并给出明确判断",
-        "最终形成《明辨录》"
-      ]
-    },
-    {
-      "prompt": "用明辨逐项推演这个产品方案，先不要实施，和我一问一答把它想透。",
-      "branch": "sequential-mingbian",
-      "must_read": [
-        "references/interview-protocol.md"
-      ],
-      "expected_behavior": [
-        "只把真实取舍交给用户",
-        "每次回答后重算辨题图",
-        "不把普通事实和可逆默认转嫁给用户"
-      ]
-    },
-    {
-      "prompt": "这份方案的大方向基本确定了，用明辨帮我把责任、流程、异常处理和验收细节想清楚。",
-      "branch": "detail-descent",
-      "must_read": [
-        "references/interview-protocol.md"
-      ],
-      "expected_behavior": [
-        "不重复泛问战略方向",
-        "重点检查执行分歧、输入输出、依赖、交接、例外和验收",
-        "不能以细节可后议为由遗漏关键落法"
-      ]
-    },
-    {
-      "prompt": "用明辨批量推进这份设计，每轮最多三个互不依赖的问题。",
-      "branch": "frontier-mingbian",
-      "must_read": [
-        "references/interview-protocol.md",
-        "references/session-state.md"
-      ],
-      "expected_behavior": [
-        "每轮最多三个互不依赖的辨题",
-        "可能相互影响的问题不得同轮提出",
-        "回答后重新计算当前前沿"
-      ]
-    },
-    {
-      "prompt": "调用明辨，在写代码前确认目标、边界、关键交互、异常和验收都已经想清楚。",
-      "branch": "confirmation-gate",
-      "must_read": [
-        "references/interview-protocol.md"
-      ],
-      "expected_behavior": [
-        "检查从目标到执行与验收的完整链路",
-        "最终输出可直接交给编码环节的《明辨录》"
-      ]
-    },
-    {
-      "prompt": "先用明辨检查这份需求；有会改变方向或造成执行分歧的问题就逐项问我，没有就直接按需求做。",
-      "branch": "zero-question-or-execute",
-      "must_read": [
-        "references/interview-protocol.md"
-      ],
-      "expected_behavior": [
-        "允许零问题结束",
-        "无关键缺口时不制造问题并直接执行",
-        "既检查方向也检查关键落法"
-      ]
-    },
-    {
-      "prompt": "先别急着做。用明辨从为什么做、怎么成、谁负责、异常怎么办一路推演到怎么验收。",
-      "branch": "full-six-layer",
-      "must_read": [
-        "references/interview-protocol.md"
-      ],
-      "expected_behavior": [
-        "覆盖辨本、辨路、辨界、辨序、辨法、辨成",
-        "不机械按六层逐项发问",
-        "只问仍有真实分歧的关键事项"
-      ]
-    },
-    {
-      "prompt": "继续上次的明辨会话，先回读已经确认的结论，再接着一问一答。",
-      "branch": "resume-session",
-      "must_read": [
-        "references/interview-protocol.md",
-        "references/session-state.md"
-      ],
-      "expected_behavior": [
-        "先运行 status",
-        "读取已定之策、已明之实、失效项、阻断项和当前前沿",
-        "不得重新 init 或只依赖聊天摘要"
-      ]
-    }
+    {"prompt":"用明辨来跟我讨论一下部门知识助手。我先说说背景和想法。","branch":"natural-entry","must_read":[],"expected_behavior":["直接开始，不索要格式化背景表"]},
+    {"prompt":"使用 $mingbian 和我一问一答推演这份方案。","branch":"explicit-invoke","must_read":[],"expected_behavior":["先读实际材料，再辨关键取舍"]},
+    {"prompt":"方向已经确定，用明辨把责任、流程、异常和验收补全。","branch":"detail-descent","must_read":[],"expected_behavior":["不重问已定方向"]},
+    {"prompt":"用明辨讨论，每轮最多三个互不依赖的问题。","branch":"batch","must_read":[],"expected_behavior":["共享至多三个待响应事项"]},
+    {"prompt":"用明辨审视这份方案，这次不要追问，直接给带边界的明辨录。","branch":"no-question-explicit","must_read":[],"expected_behavior":["启用明辨的无追问路径"]},
+    {"prompt":"先用明辨检查，没有关键问题就按既有授权做。","branch":"zero-or-execute","must_read":[],"expected_behavior":["可零问题；不扩大授权"]},
+    {"prompt":"继续上次明辨，先读已经定下的内容。","branch":"resume","must_read":[],"expected_behavior":["读取实际状态或历史，缺失时不假装恢复"]},
+    {"prompt":"用明辨讨论这个方向值不值得做，这次不用实施方案。","branch":"direction","must_read":[],"expected_behavior":["按方向就绪标准收尾"]},
+    {"prompt":"用明辨把这个小范围试点想清楚。","branch":"pilot","must_read":[],"expected_behavior":["补试点范围、护栏、验证、责任与扩展条件"]},
+    {"prompt":"用明辨把这份方案补到可以交给团队执行。","branch":"delivery","must_read":[],"expected_behavior":["关键路径可交接并可验收"]},
+    {"prompt":"暂停明辨，给我下次接着用的检查点。","branch":"pause","must_read":[],"expected_behavior":["只保留接续所需信息，不无依据声称已保存"]}
   ],
   "should_not_trigger": [
-    {
-      "prompt": "直接按这份需求修改代码并运行测试，不要再问我任何问题。",
-      "expected": "none"
-    },
-    {
-      "prompt": "审计这个 Skill 的来源、权限和安全风险。",
-      "expected": "skill-governance"
-    },
-    {
-      "prompt": "帮我把这段方案润色成管理层汇报口径。",
-      "expected": "none"
-    },
-    {
-      "prompt": "查一下当前系统是否开启了提醒功能。",
-      "expected": "none"
-    },
-    {
-      "prompt": "直接评审这份方案，给我完整问题清单和修改建议，不需要互动提问。",
-      "expected": "none"
-    },
-    {
-      "prompt": "根据这份需求给我列十个访谈问题。",
-      "expected": "none"
-    },
-    {
-      "prompt": "帮我头脑风暴十个完全不同的新方案，暂时不用收敛。",
-      "expected": "none"
-    }
+    {"prompt":"直接按需求写代码运行测试，不再提问。","expected":"none","reason":"直接执行任务，未点名明辨"},
+    {"prompt":"润色这段给老板的汇报。","expected":"none","reason":"普通润色"},
+    {"prompt":"查询当前系统是否开启提醒。","expected":"none","reason":"纯事实查询"},
+    {"prompt":"直接评审并列出问题和修改建议，不互动。","expected":"none","reason":"静态评审"},
+    {"prompt":"列十个访谈问题。","expected":"none","reason":"固定问题清单"},
+    {"prompt":"帮我发散十个方向，暂时不要收敛。","expected":"none","reason":"纯发散"},
+    {"prompt":"优化并完善 mingbian 这个 Skill 仓库本身。","expected":"none","reason":"维护 Skill 不等于启动其推演流程"},
+    {"prompt":"审计这个 Skill 的权限和供应链。","expected":"none","reason":"治理审计，不启动业务访谈"}
   ]
 }

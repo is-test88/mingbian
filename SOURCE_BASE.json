@@ -1,0 +1,18 @@
+{
+  "repository": "https://github.com/is-test88/mingbian",
+  "default_branch_at_read": "main",
+  "source_version": "3.1.0",
+  "source_tree_sha": "453aaaa7c2c21d996c4fb2658a86312872efd28c",
+  "read_date": "2026-09-05",
+  "retrieval": "Connected GitHub repository contents and file reads; source files pinned to the tree snapshot",
+  "original_blobs": {
+    "SKILL.md": "b90fc7314eeacd846a832b6aa596e20133665017",
+    "scripts/mingbian_session.py": "0b42ec9851dd26109294f6d5cf7bfff258d8180f",
+    "LICENSE": "4b85cd4a8e657178543a23564655d81c2431f870"
+  },
+  "target_package_version": "3.2.0",
+  "spec_reference": "https://agentskills.io/specification",
+  "spec_review_date": "2026-09-05",
+  "source_commit_sha": "29d2da80d12d88f1cf5918b45b58c33f8962b5f4",
+  "identifier_note": "source_commit_sha is the baseline commit; source_tree_sha is that commit's Git tree"
+}

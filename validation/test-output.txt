@@ -1,0 +1,163 @@
+=== pure-tests.txt ===
+test_assumption_can_unlock_guarded_dependent (test_mingbian_session.PureStateTests.test_assumption_can_unlock_guarded_dependent) ... ok
+test_assumption_never_becomes_verified_fact (test_mingbian_session.PureStateTests.test_assumption_never_becomes_verified_fact) ... ok
+test_assumption_requires_validation_and_failure_route (test_mingbian_session.PureStateTests.test_assumption_requires_validation_and_failure_route) ... ok
+test_authorization_record_never_grants_execution (test_mingbian_session.PureStateTests.test_authorization_record_never_grants_execution) ... ok
+test_authorization_requires_exact_scope (test_mingbian_session.PureStateTests.test_authorization_requires_exact_scope) ... ok
+test_boolean_priority_rejected (test_mingbian_session.PureStateTests.test_boolean_priority_rejected) ... ok
+test_context_question_requires_lookup_note (test_mingbian_session.PureStateTests.test_context_question_requires_lookup_note) ... ok
+test_context_question_uses_same_single_question_budget (test_mingbian_session.PureStateTests.test_context_question_uses_same_single_question_budget) ... ok
+test_cycle_rejected (test_mingbian_session.PureStateTests.test_cycle_rejected) ... ok
+test_decision_requires_explicit_basis (test_mingbian_session.PureStateTests.test_decision_requires_explicit_basis) ... ok
+test_decision_requires_source (test_mingbian_session.PureStateTests.test_decision_requires_source) ... ok
+test_default_is_not_locked_decision (test_mingbian_session.PureStateTests.test_default_is_not_locked_decision) ... ok
+test_default_requires_low_risk_and_reversal (test_mingbian_session.PureStateTests.test_default_requires_low_risk_and_reversal) ... ok
+test_defer_does_not_satisfy_hard_dependency (test_mingbian_session.PureStateTests.test_defer_does_not_satisfy_hard_dependency) ... ok
+test_defer_requires_trigger_and_interim_action (test_mingbian_session.PureStateTests.test_defer_requires_trigger_and_interim_action) ... ok
+test_deferred_leaf_is_explicit (test_mingbian_session.PureStateTests.test_deferred_leaf_is_explicit) ... ok
+test_dependency_frontier (test_mingbian_session.PureStateTests.test_dependency_frontier) ... ok
+test_direction_review_may_skip_implementation_with_reason (test_mingbian_session.PureStateTests.test_direction_review_may_skip_implementation_with_reason) ... ok
+test_duplicate_ids_and_dependencies_rejected (test_mingbian_session.PureStateTests.test_duplicate_ids_and_dependencies_rejected) ... ok
+test_execution_review_cannot_skip_implementation (test_mingbian_session.PureStateTests.test_execution_review_cannot_skip_implementation) ... ok
+test_fact_cannot_be_defaulted (test_mingbian_session.PureStateTests.test_fact_cannot_be_defaulted) ... ok
+test_fact_requires_evidence (test_mingbian_session.PureStateTests.test_fact_requires_evidence) ... ok
+test_frontier_respects_limit_and_dependencies (test_mingbian_session.PureStateTests.test_frontier_respects_limit_and_dependencies) ... ok
+test_initial_fact_does_not_block_independent_decision (test_mingbian_session.PureStateTests.test_initial_fact_does_not_block_independent_decision) ... ok
+test_initial_state_not_silently_discarded (test_mingbian_session.PureStateTests.test_initial_state_not_silently_discarded) ... ok
+test_invalid_batch_is_atomic_in_memory (test_mingbian_session.PureStateTests.test_invalid_batch_is_atomic_in_memory) ... ok
+test_invalidation_orphans_descendants_transitively (test_mingbian_session.PureStateTests.test_invalidation_orphans_descendants_transitively) ... ok
+test_malformed_types_return_user_errors (test_mingbian_session.PureStateTests.test_malformed_types_return_user_errors) ... ok
+test_persisted_branch_cannot_omit_dependency_fields (test_mingbian_session.PureStateTests.test_persisted_branch_cannot_omit_dependency_fields) ... ok
+test_reopen_cascades_even_when_relocked_in_same_batch (test_mingbian_session.PureStateTests.test_reopen_cascades_even_when_relocked_in_same_batch) ... ok
+test_reopen_leaves_independent_decision_locked (test_mingbian_session.PureStateTests.test_reopen_leaves_independent_decision_locked) ... ok
+test_reported_fact_not_verified (test_mingbian_session.PureStateTests.test_reported_fact_not_verified) ... ok
+test_review_requires_evidence_and_next_action (test_mingbian_session.PureStateTests.test_review_requires_evidence_and_next_action) ... ok
+test_revise_cannot_change_identity (test_mingbian_session.PureStateTests.test_revise_cannot_change_identity) ... ok
+test_revision_rejects_locked_branch_edits (test_mingbian_session.PureStateTests.test_revision_rejects_locked_branch_edits) ... ok
+test_self_dependency_rejected (test_mingbian_session.PureStateTests.test_self_dependency_rejected) ... ok
+test_unknown_dependency_rejected (test_mingbian_session.PureStateTests.test_unknown_dependency_rejected) ... ok
+test_zero_question_is_supported_but_not_auto_confirmed (test_mingbian_session.PureStateTests.test_zero_question_is_supported_but_not_auto_confirmed) ... ok
+
+----------------------------------------------------------------------
+Ran 38 tests in 0.006s
+
+OK
+
+
+=== cli-batch-0.txt ===
+test_apply_invalidates_existing_review (test_mingbian_session.CliTests.test_apply_invalidates_existing_review) ... ok
+test_closed_session_cannot_be_modified (test_mingbian_session.CliTests.test_closed_session_cannot_be_modified) ... ok
+test_complete_review_confirm_reopen_lifecycle (test_mingbian_session.CliTests.test_complete_review_confirm_reopen_lifecycle) ... ok
+test_concurrent_writers_cannot_overwrite_each_other (test_mingbian_session.CliTests.test_concurrent_writers_cannot_overwrite_each_other) ... ok
+test_corrupted_json_is_reported (test_mingbian_session.CliTests.test_corrupted_json_is_reported) ... ok
+test_duplicate_init_cannot_overwrite (test_mingbian_session.CliTests.test_duplicate_init_cannot_overwrite) ... ok
+test_duplicate_json_keys_and_nonfinite_values_rejected (test_mingbian_session.CliTests.test_duplicate_json_keys_and_nonfinite_values_rejected) ... ok
+test_export_distinguishes_defaults_and_does_not_overwrite (test_mingbian_session.CliTests.test_export_distinguishes_defaults_and_does_not_overwrite) ... ok
+test_export_includes_remaining_frontier (test_mingbian_session.CliTests.test_export_includes_remaining_frontier) ... ok
+test_export_of_stale_record_warns (test_mingbian_session.CliTests.test_export_of_stale_record_warns) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 16.666s
+
+OK
+
+
+=== cli-batch-10.txt ===
+test_graph_clear_does_not_allow_confirmation_without_record (test_mingbian_session.CliTests.test_graph_clear_does_not_allow_confirmation_without_record) ... ok
+test_invalid_batch_does_not_change_disk (test_mingbian_session.CliTests.test_invalid_batch_does_not_change_disk) ... ok
+test_invalid_mode_limit_leaves_file_unchanged (test_mingbian_session.CliTests.test_invalid_mode_limit_leaves_file_unchanged) ... ok
+test_list_handles_invalid_file_without_hiding_valid_session (test_mingbian_session.CliTests.test_list_handles_invalid_file_without_hiding_valid_session) ... ok
+test_lock_cleaned_up_after_failed_write (test_mingbian_session.CliTests.test_lock_cleaned_up_after_failed_write) ... ok
+test_lock_contention_is_not_overridden (test_mingbian_session.CliTests.test_lock_contention_is_not_overridden) ... ok
+test_migrate_refuses_to_overwrite_existing_backup (test_mingbian_session.CliTests.test_migrate_refuses_to_overwrite_existing_backup) ... ok
+test_missing_expected_revision_rejected (test_mingbian_session.CliTests.test_missing_expected_revision_rejected) ... ok
+test_path_traversal_rejected (test_mingbian_session.CliTests.test_path_traversal_rejected) ... ok
+test_private_file_and_directory_modes (test_mingbian_session.CliTests.test_private_file_and_directory_modes) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 12.056s
+
+OK
+
+
+=== cli-batch-20.txt ===
+test_record_integrity_is_checked (test_mingbian_session.CliTests.test_record_integrity_is_checked) ... ok
+test_review_rejects_open_branch (test_mingbian_session.CliTests.test_review_rejects_open_branch) ... ok
+test_revision_cli_and_file_must_match (test_mingbian_session.CliTests.test_revision_cli_and_file_must_match) ... ok
+test_schema2_explicit_migration_and_exact_backup (test_mingbian_session.CliTests.test_schema2_explicit_migration_and_exact_backup) ... ok
+test_set_mode_switches_frontier_without_overasking (test_mingbian_session.CliTests.test_set_mode_switches_frontier_without_overasking) ... ok
+test_source_drift_detected_and_rebase_reopens (test_mingbian_session.CliTests.test_source_drift_detected_and_rebase_reopens) ... ok
+test_stale_revision_rejected_without_modifying_file (test_mingbian_session.CliTests.test_stale_revision_rejected_without_modifying_file) ... ok
+test_symlink_session_rejected (test_mingbian_session.CliTests.test_symlink_session_rejected) ... ok
+test_unavailable_source_blocks_confirmation (test_mingbian_session.CliTests.test_unavailable_source_blocks_confirmation) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 15.309s
+
+OK
+
+
+=== structure-tests.txt ===
+test_documented_example_roundtrip (test_skill_structure.SkillStructureTests.test_documented_example_roundtrip)
+Use the real parser/command handlers with temporary storage and shipped fixtures. ... ok
+test_missing_reference_is_detected (test_skill_structure.SkillStructureTests.test_missing_reference_is_detected) ... ok
+test_oversized_description_is_detected (test_skill_structure.SkillStructureTests.test_oversized_description_is_detected) ... ok
+test_release_structure_is_valid (test_skill_structure.SkillStructureTests.test_release_structure_is_valid) ... ok
+test_version_mismatch_is_detected (test_skill_structure.SkillStructureTests.test_version_mismatch_is_detected) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.068s
+
+OK
+
+
+=== final-pure-structure-tests.txt ===
+test_assumption_can_unlock_guarded_dependent (test_mingbian_session.PureStateTests.test_assumption_can_unlock_guarded_dependent) ... ok
+test_assumption_never_becomes_verified_fact (test_mingbian_session.PureStateTests.test_assumption_never_becomes_verified_fact) ... ok
+test_assumption_requires_validation_and_failure_route (test_mingbian_session.PureStateTests.test_assumption_requires_validation_and_failure_route) ... ok
+test_authorization_record_never_grants_execution (test_mingbian_session.PureStateTests.test_authorization_record_never_grants_execution) ... ok
+test_authorization_requires_exact_scope (test_mingbian_session.PureStateTests.test_authorization_requires_exact_scope) ... ok
+test_boolean_priority_rejected (test_mingbian_session.PureStateTests.test_boolean_priority_rejected) ... ok
+test_context_question_requires_lookup_note (test_mingbian_session.PureStateTests.test_context_question_requires_lookup_note) ... ok
+test_context_question_uses_same_single_question_budget (test_mingbian_session.PureStateTests.test_context_question_uses_same_single_question_budget) ... ok
+test_cycle_rejected (test_mingbian_session.PureStateTests.test_cycle_rejected) ... ok
+test_decision_requires_explicit_basis (test_mingbian_session.PureStateTests.test_decision_requires_explicit_basis) ... ok
+test_decision_requires_source (test_mingbian_session.PureStateTests.test_decision_requires_source) ... ok
+test_default_is_not_locked_decision (test_mingbian_session.PureStateTests.test_default_is_not_locked_decision) ... ok
+test_default_requires_low_risk_and_reversal (test_mingbian_session.PureStateTests.test_default_requires_low_risk_and_reversal) ... ok
+test_defer_does_not_satisfy_hard_dependency (test_mingbian_session.PureStateTests.test_defer_does_not_satisfy_hard_dependency) ... ok
+test_defer_requires_trigger_and_interim_action (test_mingbian_session.PureStateTests.test_defer_requires_trigger_and_interim_action) ... ok
+test_deferred_leaf_is_explicit (test_mingbian_session.PureStateTests.test_deferred_leaf_is_explicit) ... ok
+test_dependency_frontier (test_mingbian_session.PureStateTests.test_dependency_frontier) ... ok
+test_direction_review_may_skip_implementation_with_reason (test_mingbian_session.PureStateTests.test_direction_review_may_skip_implementation_with_reason) ... ok
+test_duplicate_ids_and_dependencies_rejected (test_mingbian_session.PureStateTests.test_duplicate_ids_and_dependencies_rejected) ... ok
+test_execution_review_cannot_skip_implementation (test_mingbian_session.PureStateTests.test_execution_review_cannot_skip_implementation) ... ok
+test_fact_cannot_be_defaulted (test_mingbian_session.PureStateTests.test_fact_cannot_be_defaulted) ... ok
+test_fact_requires_evidence (test_mingbian_session.PureStateTests.test_fact_requires_evidence) ... ok
+test_frontier_respects_limit_and_dependencies (test_mingbian_session.PureStateTests.test_frontier_respects_limit_and_dependencies) ... ok
+test_initial_fact_does_not_block_independent_decision (test_mingbian_session.PureStateTests.test_initial_fact_does_not_block_independent_decision) ... ok
+test_initial_state_not_silently_discarded (test_mingbian_session.PureStateTests.test_initial_state_not_silently_discarded) ... ok
+test_invalid_batch_is_atomic_in_memory (test_mingbian_session.PureStateTests.test_invalid_batch_is_atomic_in_memory) ... ok
+test_invalidation_orphans_descendants_transitively (test_mingbian_session.PureStateTests.test_invalidation_orphans_descendants_transitively) ... ok
+test_malformed_types_return_user_errors (test_mingbian_session.PureStateTests.test_malformed_types_return_user_errors) ... ok
+test_persisted_branch_cannot_omit_dependency_fields (test_mingbian_session.PureStateTests.test_persisted_branch_cannot_omit_dependency_fields) ... ok
+test_reopen_cascades_even_when_relocked_in_same_batch (test_mingbian_session.PureStateTests.test_reopen_cascades_even_when_relocked_in_same_batch) ... ok
+test_reopen_leaves_independent_decision_locked (test_mingbian_session.PureStateTests.test_reopen_leaves_independent_decision_locked) ... ok
+test_reported_fact_not_verified (test_mingbian_session.PureStateTests.test_reported_fact_not_verified) ... ok
+test_review_requires_evidence_and_next_action (test_mingbian_session.PureStateTests.test_review_requires_evidence_and_next_action) ... ok
+test_revise_cannot_change_identity (test_mingbian_session.PureStateTests.test_revise_cannot_change_identity) ... ok
+test_revision_rejects_locked_branch_edits (test_mingbian_session.PureStateTests.test_revision_rejects_locked_branch_edits) ... ok
+test_self_dependency_rejected (test_mingbian_session.PureStateTests.test_self_dependency_rejected) ... ok
+test_unknown_dependency_rejected (test_mingbian_session.PureStateTests.test_unknown_dependency_rejected) ... ok
+test_zero_question_is_supported_but_not_auto_confirmed (test_mingbian_session.PureStateTests.test_zero_question_is_supported_but_not_auto_confirmed) ... ok
+test_documented_example_roundtrip (test_skill_structure.SkillStructureTests.test_documented_example_roundtrip)
+Use the real parser/command handlers with temporary storage and shipped fixtures. ... ok
+test_missing_reference_is_detected (test_skill_structure.SkillStructureTests.test_missing_reference_is_detected) ... ok
+test_oversized_description_is_detected (test_skill_structure.SkillStructureTests.test_oversized_description_is_detected) ... ok
+test_release_structure_is_valid (test_skill_structure.SkillStructureTests.test_release_structure_is_valid) ... ok
+test_version_mismatch_is_detected (test_skill_structure.SkillStructureTests.test_version_mismatch_is_detected) ... ok
+
+----------------------------------------------------------------------
+Ran 43 tests in 0.076s
+
+OK

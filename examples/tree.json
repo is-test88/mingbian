@@ -1,0 +1,38 @@
+{
+  "branches": [
+    {
+      "id": "D01",
+      "kind": "decision",
+      "title": "验证范围",
+      "question": "先离线验证，还是进入真实流程？",
+      "recommendation": "先离线验证。",
+      "rationale": "决定权限、投入边界与风险。",
+      "depends_on": [],
+      "priority": 10
+    },
+    {
+      "id": "F01",
+      "kind": "fact",
+      "title": "示例输入可用性",
+      "question": "查验是否有正常和空输入两类合成样例。",
+      "recommendation": "读取 examples/sample-input.json。",
+      "rationale": "决定能否按示例验证正常与拒绝路径。",
+      "depends_on": [
+        "D01"
+      ],
+      "priority": 20
+    },
+    {
+      "id": "D02",
+      "kind": "decision",
+      "title": "无依据时的处理",
+      "question": "无依据问题由业务规则负责人集中接管，还是由原提问入口人工接管？",
+      "recommendation": "本次离线示例由规则负责人集中归集。",
+      "rationale": "两条合理路径的责任、交接与反馈方式不同。",
+      "depends_on": [
+        "F01"
+      ],
+      "priority": 30
+    }
+  ]
+}

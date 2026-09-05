@@ -1,0 +1,29 @@
+{
+  "expected_revision": 1,
+  "operations": [
+    {
+      "op": "lock",
+      "id": "D01",
+      "answer": "仅做离线验证，不进入真实业务流程",
+      "basis": "user_decision",
+      "source": "sample-plan.md 中的合成测试设定；并非真实用户批准"
+    },
+    {
+      "op": "lock",
+      "id": "F01",
+      "answer": "合成示例文件声明了 normal 与 empty 两类输入",
+      "basis": "verified",
+      "source": "examples/sample-input.json",
+      "evidence": [
+        "读取 examples/sample-input.json 的 cases：normal 和 empty；仅证明合成输入存在，不证明实际业务有效"
+      ]
+    },
+    {
+      "op": "lock",
+      "id": "D02",
+      "answer": "离线示例中，无依据问题由示例规则负责人集中归集",
+      "basis": "user_decision",
+      "source": "sample-plan.md 中的合成测试设定；并非真实人员任命"
+    }
+  ]
+}

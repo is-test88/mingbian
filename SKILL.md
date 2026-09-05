@@ -166,4 +166,4 @@ metadata:
 | 修改定位、品牌或文风 | [立意与原则](references/foundations.md) |
 | 维护或验证效果 | [验成规](references/evaluation.md) |
 
-维护后至少运行 `python3 scripts/test_mingbian_session.py`，并在目标模型中执行 `test-prompts.json` 的触发与行为回归。结构或代码测试通过不等于模型行为通过；示例不能冒充实测结果。
+维护后运行 `python3 -m unittest discover -s scripts -p 'test_*.py'` 与 `python3 scripts/validate_skill.py`。结构和代码通过不等于模型行为通过；行为评测须保留真实输出，不能用编写的范例冒充测试结果。

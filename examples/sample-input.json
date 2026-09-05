@@ -1,0 +1,15 @@
+{
+  "synthetic": true,
+  "cases": [
+    {
+      "id": "normal",
+      "input": "如何查询已公开的流程说明？",
+      "expected": "引用给定流程说明，不操作真实系统"
+    },
+    {
+      "id": "empty",
+      "input": "",
+      "expected": "提示缺少输入，不猜测、不触发外部动作"
+    }
+  ]
+}
